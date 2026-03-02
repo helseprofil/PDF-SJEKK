@@ -1,0 +1,19 @@
+# Ikke Git-tracke disse filene:
+*_Include_[0-9]_*
+
+# Stata kladdefiler som ikke blir ryddet vekk automatisk
+~*
+
+#Gamle versjonslagre
+OLD/
+OLD*/
+*OLD/
+
+# Historie-filer fra R
+.Rhistory
+.Rapp.history
+
+# Hele kataloger for test etc
+TEST/**/*.*
+x_OLD/**/*.*
+

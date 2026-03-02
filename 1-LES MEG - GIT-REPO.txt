@@ -1,0 +1,5 @@
+KATALOGEN \PDF-SJEKK ER GIT-STYRT
+
+Jeg laget en .gitignore som holder _Include_-filene i underkatalogene utenfor.
+Den holder også katalogene TEST og x-OLD utenfor.
+
