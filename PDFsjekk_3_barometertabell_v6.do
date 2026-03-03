@@ -70,7 +70,14 @@ sort spraak sted_kode lpnr 				// sortert slik PDFens linjer skal være
 drop tidsserieurl metadataurl			//Lang string, gjør filen vanskelig å se på.
 *exit
 
-egen btabIN = concat(lpnr indikator verdi_l verdi_m verdi_ref enhet), punct(" ") //2017: indikator ist.f. INDIK.
+*** Lagt inn "periode" i concat for FHP-F. Hvis det ikke matcher de andre profilene, 
+*** bruk i stedet "Fjerne..."-bolken som nå er kommentert ut i Include.
+if "$geonivaa" == "fylke" {
+	egen btabIN = concat(lpnr indikator verdi_m verdi_ref enhet periode), punct(" ")
+}
+else {
+	egen btabIN = concat(lpnr indikator verdi_l verdi_m verdi_ref enhet periode), punct(" ") 
+}
 
 *replace btabIN = usubinstr(btabIN, " år", " ....",.) //Enhet, bakerst, scramblet i PDF.
 replace btabIN = usubinstr(btabIN, " ", " ", .) //Hard space, fra Excels tusenskilletegn, erstatt med vanlig space

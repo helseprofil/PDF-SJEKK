@@ -16,7 +16,7 @@ global servernavn "Produksjon" 	// Sett stjerne foran den som IKKE skal brukes.
 
 global profilaar = 2026
 global profiltype "FHP" 		// Tillatt: FHP OVP
-global geonivaa   "bydel"		// Tillatt: bydel kommune fylke 	OBS: Ikke fylke for OVP.
+global geonivaa   "fylke"		// Tillatt: bydel kommune fylke 	OBS: Ikke fylke for OVP.
 
 global Geofasitkat "$root/Masterfiler/$profilaar" 
 global Geofasitfil "Stedsnavn_SSB_Unicode.dta" //OBS bruk Unicode-versjonen
