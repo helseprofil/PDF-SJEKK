@@ -1,5 +1,8 @@
 * Samla analyse -
 
+**  HUSK GIT PULL FØR REDIGERING  **
+
+
 **	SAMORDNET FELLESSCRIPT FOR ALLE PROFILER
 
 quietly {
