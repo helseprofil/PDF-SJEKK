@@ -72,11 +72,13 @@ drop tidsserieurl metadataurl			//Lang string, gjør filen vanskelig å se på.
 
 *** Lagt inn "periode" i concat for FHP-F. Hvis det ikke matcher de andre profilene, 
 *** bruk i stedet "Fjerne..."-bolken som nå er kommentert ut i Include.
+	*** Matchet ikke de andre, der er Periode missing.
+	
 if "$geonivaa" == "fylke" {
 	egen btabIN = concat(lpnr indikator verdi_m verdi_ref enhet periode), punct(" ")
 }
 else {
-	egen btabIN = concat(lpnr indikator verdi_l verdi_m verdi_ref enhet periode), punct(" ") 
+	egen btabIN = concat(lpnr indikator verdi_l verdi_m verdi_ref enhet ), punct(" ") 
 }
 
 *replace btabIN = usubinstr(btabIN, " år", " ....",.) //Enhet, bakerst, scramblet i PDF.
